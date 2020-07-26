@@ -1,0 +1,36 @@
+{
+  "name": "heroku-node-test",
+  "version": "0.0.1",
+  "scripts": {
+    "lint": "eslint src/ --ext .js,.jsx",
+    "serve": "nodemon dist/",
+    "start": "node src/"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node ./node_modules/fit-commit-js/lib/hook.js .git/COMMIT_EDITMSG",
+      "pre-commit": "npm run lint"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "all",
+    "bracketSpacing": false,
+    "printWidth": 100
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "fit-commit-js": "^0.3.2",
+    "husky": "^4.2.5",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.9.2",
+    "express": "^4.17.1",
+    "graphql": "^14.5.4",
+    "uuid": "^3.3.3"
+  }
+}

@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "12.16.3"
+script: "true"
+deploy:
+  provider: heroku
+  app: burt-node-test
+  api_key:
+    secure: "TODO"
