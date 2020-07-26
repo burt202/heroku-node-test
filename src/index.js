@@ -13,6 +13,7 @@ const typeDefs = gql`
   }
 `
 const resolvers = {
+  Query: {},
   Mutation: {
     createDoc: (_, {name}) => {
       return {id: uuidV4(), name}
@@ -29,7 +30,7 @@ const currentDate = new Date().toLocaleString()
 
 app.get("/", (_, res) => {
   res.send(
-    `see graphQl at http://localhost:8080${server.graphqlPath} - refreshed on ${currentDate}`,
+    `see graphql at http://localhost:8080${server.graphqlPath} - refreshed on ${currentDate}`,
   )
 })
 
