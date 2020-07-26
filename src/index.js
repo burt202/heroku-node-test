@@ -32,10 +32,12 @@ server.applyMiddleware({app})
 
 const currentDate = new Date().toLocaleString()
 
+const port = process.env.PORT || 8080
+
 app.get("/", (_, res) => {
   res.send(
-    `see graphql at http://localhost:8080${server.graphqlPath} - refreshed on ${currentDate}`,
+    `see graphql at http://localhost:${port}${server.graphqlPath} - refreshed on ${currentDate}`,
   )
 })
 
-app.listen({port: 8080}, () => console.log("Server ready at http://localhost:8080"))
+app.listen({port}, () => console.log(`Server ready at http://localhost:${port}`))
