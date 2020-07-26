@@ -8,6 +8,10 @@ const typeDefs = gql`
     name: String!
   }
 
+  type Query {
+    dummy: String
+  }
+
   type Mutation {
     createDoc(name: String!): Doc!
   }
