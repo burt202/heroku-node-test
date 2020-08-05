@@ -6,6 +6,7 @@ deploy:
   provider: heroku
   app: burt-node-test
   on:
-    branch: promote
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^deploy-*$
   api_key:
     secure: DdSMVGxIhenXiR1t4XJUmJ7/OoDaDeAFBnJ/RofMv3cXBROCF7xbOT9XUO9n4ciSFrOIhap6P3x0F8NV6WxejJUNdZBy7V/6YTO2f4V0oiDVshGV2qsh8lstpS6fCxVYiehpgXgkZ+bvFXfPw9b/si52E9KM+BO25aRjOeV8VhjeUS1Hm8JBwVvaBpEAEqOTlH34erIXl29I2JXTqBlDKzDDKGETGBxv+upfH6LStRnTsQicNHFIA2lDuq3nDEDQQW9zJVc57Hs13A+EM6KiqILlU7mnbrUTrDZnVzH9P5iQFet5g5Ewc6Hp6OMYHAWlSDCAY5m5UIrBorBbM//T+jCCwMjXIRdQg1nwlpElmr/cs7AsX4rMTcSm/ZPQGGuf/Y5wGwuMOXqJqRDr1wX5ZlOH/ajJAhAk7Aivg+We+G4nF7zdcqoXwCyJ4YVz9TPl+CqwVQhJobg5U5TsrmvTElbd+3N7xwmFJFi6Ko2aRZdaI5ETSHSrM1iKVnC1BHeCa3WVQq6GBnKXF/3F9CIsd85vUORbnAD1ka6B0ohJn4J2mXD79Evc66K1vPJHkpaDSh+VjEamLrEloGWEdSXJKDyKl5Ef86R/YFpBUExeg3q02lcMFi93p92nWW0/8cVMktnsuNTYKyBrSWklvFfJH4AAoiwYD3NzTL0jcbWOa6M=

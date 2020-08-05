@@ -4,7 +4,8 @@
   "scripts": {
     "lint": "eslint src/ --ext .js,.jsx",
     "serve": "nodemon dist/",
-    "start": "node src/"
+    "start": "node src/",
+    "deploy": "git ch -b deploy-$(echo \"`date +%s`\") && git push && git ch -"
   },
   "husky": {
     "hooks": {
