@@ -41,7 +41,7 @@ app.get("/", (_, res) => {
 })
 
 app.get("/test", (_, res) => {
-  res.send("hghsdkjdshgds")
+  res.send("xxx")
 })
 
 app.listen({port}, () => console.log(`Server ready at http://localhost:${port}`))
